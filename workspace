@@ -79,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Blockquotes and Callouts.md",
+                "file": "Stuff.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,10 +97,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "137e2ba5f91a7646",
+  "active": "802c9372ebbada46",
   "lastOpenFiles": [
-    "Blockquotes and Callouts.md",
     "Stuff.md",
+    "Blockquotes and Callouts.md",
     "Format Your Notes.md",
     "Code.md",
     "This is a link.md",
