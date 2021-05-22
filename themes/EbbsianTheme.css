@@ -1,0 +1,1070 @@
+:root {
+/* ========================================================================== */
+
+/* Put a new image url here to change the vault header image. */
+--img-header: url("https://images.unsplash.com/photo-1576235789670-28a9c8e950b8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+
+/* ========================================================================== */
+/* CONTENTS
+1. Fonts
+2. Colour Palette
+3. Headers and emphasis
+4. UI and Panels
+5. Popovers
+6. Tables
+7. Code
+8. Frontmatter
+9. Page Header
+10. Jazzy block boxes
+11. Tags
+12. Summary boxes and callouts
+
+/* ========================================================================== */
+/* 1. Fonts */
+/* -------------------------------------------------------------------------- */
+
+  /* Fonts */
+  --default-font: "Spectral", serif;
+  --mermaid-font: var(--default-font);
+  --reveal-font: var(--default-font);
+  --font-body: "Spectral", serif;
+  --font-monospace: "Anonymous Pro", "Source Code Pro", monospace;
+  --font-headers: "Raleway";
+
+
+/* 2. Colour Palette */
+/* -------------------------------------------------------------------------- */
+
+/* Define colour variables for reuse */
+/* Colours */
+    --primary-accent:#418AB3;
+    --accent-muted:#36638b;
+
+    --bright-red: #DF5327;
+    --bright-orange: #F29000;
+    --bright-yellow: #F1B801;
+    --bright-green: #A6B727;
+    --bright-turquoise:#28a197;
+    --bright-blue: #418AB3;
+    --bright-purple: #6A3A96;
+    --bright-pink: #f15bb0;
+
+    --muted-red: #FBEAE5;
+    --muted-orange: #FFF0D9;
+    --muted-yellow: #FFF9E7;
+    --muted-green: #F0F5D0;
+    --muted-blue: #D8E8F1;
+    --muted-purple: #ECDFF5;
+    --muted-pink: #FFEFFB;
+
+    --grey-ultralight:	#F5F5F5;
+    --grey-light: #C0C0C0;
+    --grey-mid: #555555;
+    --grey-1:#363d44;
+  	--grey-2:#30363d;
+  	--grey-dark:#2a3035;
+  	--grey-4:#24292e;
+  	--grey-5:#1e2226;
+  	--grey-6:#181b1e;
+}
+
+.theme-light {
+  --background-primary: #fff; /* Page */
+  --background-primary-alt:var(--grey-light); /* Handles */
+  --background-secondary:  white;
+  --background-secondary-alt: var(--primary-accent); /* Hoverover on text in menus */
+  --background-modifier-border: var(--primary-accent); /* Line breaks and pane borders */
+  --background-modifier-form-field: #fff;
+  --background-modifier-form-field-highlighted: #fff;
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+  --background-modifier-success: #A4E7C3;
+  --background-modifier-error: #990000;
+  --background-modifier-error-rgb: 230, 135, 135;
+  --background-modifier-error-hover: #bb0000;
+  --background-modifier-cover: rgba(0, 0, 0, 0.8);
+
+  --left-pane: var(--primary-accent);
+
+
+  --text-accent: var(--primary-accent);
+  --text-accent-hover: var(--accent-muted);
+  --text-normal: #2e3338;
+  --text-muted: #888888;
+  --text-muted-rgb: 136, 136, 136;
+  --text-faint: #999999;
+  --text-error: #800000;
+  --text-error-hover: #990000;
+  --text-highlight-bg: rgba(255, 255, 0, 0.4);
+  --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+  --text-selection: rgba(204, 230, 255, 0.99);
+  --text-on-accent: #f2f2f2;
+  --interactive-normal: #f2f3f5;
+  --interactive-hover: #e9e9e9;
+  --interactive-accent: var(--primary-accent);
+  --interactive-accent-rgb: 123, 108, 217;
+  --interactive-accent-hover: var(--primary-accent);
+  --interactive-success: #197300;
+  --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2);
+  --scrollbar-bg: rgba(0, 0, 0, 0.05);
+  --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
+  --highlight-mix-blend-mode: darken;
+}
+
+
+/* 3. Headers and Emphasis */
+/* -------------------------------------------------------------------------- */
+
+/* Header formatting */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+
+/* General heading style */
+  .cm-s-obsidian .cm-header {
+    font-family: var(--font-headers);
+    font-weight: 500;
+  }
+  .markdown-preview-view h1,
+  .markdown-preview-view h2,
+  .markdown-preview-view h3,
+  .markdown-preview-view h4,
+  .markdown-preview-view h5,
+  .markdown-preview-view h6 {
+    font-family: var(--font-headers);
+    font-weight: 500;
+  }
+
+  .markdown-preview-view h1 {
+    font-size: 24px;
+    border-bottom: solid 3px var(--bright-blue);
+    margin-top: 32px;
+    margin-bottom: 4px;
+  }
+
+  .markdown-preview-view h2 {
+    font-size: 20px;
+    border-bottom: solid 3px var(--bright-green);
+    margin-top: 23px;
+    margin-bottom: 1px;
+  }
+
+  .markdown-preview-view h3 {
+   font-size: 18px;
+   border-bottom: solid 3px var(--bright-yellow);
+   margin-top: 16px;
+   margin-bottom: 0px;
+ }
+
+  .markdown-preview-view h4,
+  .markdown-preview-view h5,
+  .markdown-preview-view h6  {
+    font-size: 16px;
+     border-bottom: solid 3px var(--bright-orange);
+    margin-top: 16px;
+    margin-bottom: 0px;
+  }
+
+  .cm-s-obsidian .cm-header-1 {
+    font-size: 24px;
+  }
+
+  .cm-s-obsidian .cm-header-2 {
+    font-size: 20px;
+  }
+
+  .cm-s-obsidian .cm-header-3 {
+    font-size: 18px;
+  }
+
+  .cm-s-obsidian .cm-header-4,
+  .cm-s-obsidian .cm-header-5,
+  .cm-s-obsidian .cm-header-6 {
+    font-size: 16px;
+  }
+
+  .cm-s-obsidian .cm-header-6 {
+    color: var(--text-muted);
+  }
+
+
+a,
+a.internal-link,
+.markdown-preview-view a.internal-link {
+  color: var(--primary-accent);
+  text-decoration: none;
+  border-bottom: solid 0.5px var(--primary-accent);
+}
+a:hover,
+a.internal-link:hover {
+  color: var(--accent-muted);
+    text-decoration: none;
+    border-bottom: solid 0.5px var(--accent-muted);
+}
+/* Display style for *emphasised* text */
+.markdown-preview-view em {
+  font-family: var(--font-body);
+  font-style: italic;
+}
+
+/* Display style for **strong** text */
+.markdown-preview-view strong {
+  font-family: var(--font-body);
+  font-weight: 500;
+    color: var(--text-accent);
+}
+
+/* Display style for ***stong emphasised*** text */
+.markdown-preview-view strong > em {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--text-accent);
+}
+
+  /* Bulleted lists */
+    .cm-hmd-list-indent .cm-tab, ul ul { position: relative; }
+    .cm-hmd-list-indent .cm-tab::before, ul ul::before {
+     content:'';
+     border-left: 1px solid rgba(0, 122, 255, 0.25);
+     position: absolute; ;
+    }
+
+    .cm-hmd-list-indent .cm-tab::before { left: 0; top: -5px; bottom: -4px;
+    }
+    ul ul::before { left: -11px; top: 0; bottom: 0; color: pink;
+    }
+
+      /* Changes ordered list style when nested under ordered lists (preview mode only). */
+      /* decimal = "1., 2.", lower-latin = "a., b.", lower-roman = "i., ii." */
+      	ol
+      { list-style-type: decimal; }
+      	ol ol
+      { list-style-type: lower-latin; }
+      	ol ol ol
+      { list-style-type: lower-roman; }
+
+      /* Restarts count when nested in between one unordered list. */
+      	ul ol ul ol
+      { list-style-type: decimal; }
+      	ul ol ul ol ol
+      { list-style-type: lower-latin; }
+      	ul ol ul ol ol ol
+      { list-style-type: lower-roman; }
+
+    .markdown-preview-view li {
+      margin-top: 12px;
+    }
+
+    /* Embedded image padding */
+    .internal-embed img {
+      display: block;
+      line-height: 20px;
+      padding-top:10px;
+    }
+
+/* 4. UI and Panels */
+/* -------------------------------------------------------------------------- */
+
+/* turn the left pane into a solid accent colour and the right one white. */
+.workspace-ribbon.side-dock-ribbon.mod-left,
+.workspace-split.mod-horizontal.mod-left-split,
+.workspace-ribbon.side-dock-ribbon.mod-left div ,
+.workspace-split.mod-horizontal.mod-left-split div {
+  background-color: var(--grey-mid);
+  font-family: var(--font-headers);
+  color: var(--grey-light);
+}
+
+.workspace-ribbon.side-dock-ribbon.mod-right,
+.workspace-split.mod-horizontal.mod-right-split div {
+  background-color: white;
+  font-family: var(--font-headers);
+  font-size: 14px;
+}
+
+.workspace-leaf-resize-handle {
+  height: 100%;
+  top:auto;
+}
+
+/* Remove all border radii */
+.workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content,
+.workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content {
+  border-radius:0px;
+}
+
+/* Tweaking navigation panel UI */
+.nav-file-title{
+  width:inherit;
+}
+.nav-file-title-content {
+overflow: hidden;
+text-overflow: ellipsis;
+width: inherit;
+}
+.workspace-split.mod-horizontal.mod-left-split div:hover {
+  color:white;
+}
+.workspace-split.mod-horizontal.mod-right-split div:hover {
+  color:var(--primary-accent);
+}
+.workspace-split.mod-horizontal.mod-left-split .is-active div {
+  color: white;
+}
+.nav-action-button.is-active {
+  color:var(--primary-accent);
+}
+
+/* 5. Popovers */
+/* -------------------------------------------------------------------------- */
+
+.popover.hover-popover.is-loaded {
+  white-space: wrap;
+}
+.popover.hover-popover {
+    position: absolute;
+    z-index: var(--layer-popover);
+    max-height: 800px;
+    min-height: 600px;
+    width: 700px;
+    overflow: auto;
+    padding: 5px;
+    border-bottom: none;
+
+}
+
+.popover.hover-popover .markdown-preview-view {
+  height: auto;
+}
+.popover h1 {
+	font-size: 24px;
+}
+
+.popover {
+	font-size: 16px;
+	border-radius: 3px;
+}
+.titlebar {
+  background-color: var(--background-secondary-alt);
+}
+
+.titlebar-inner {
+  color: var(--text-normal);
+}
+
+/* Link suggestions */
+.suggestion-item.is-selected,
+.suggestion-flair {
+  background-color: var(--grey-ultralight);
+  color: var(--primary-accent);
+}
+
+/* 6. Tables */
+/* -------------------------------------------------------------------------- */
+
+
+/* fix for long markdown editor text (tables) getting cut off -borrowed from Notation Theme */
+    .CodeMirror-scroll {
+      margin-right: -10px;
+    }
+
+.markdown-preview-view table {
+  width: auto;
+  margin-left: auto;
+ margin-right: auto;
+ margin-top: 20px;
+}
+
+/* Table headers/first column styling */
+.markdown-preview-view th:first-child,
+.markdown-preview-view td:first-child {
+      border-left: none;
+    }
+
+.markdown-preview-view th:last-child,
+.markdown-preview-view td:last-child {
+      border-right: none;
+    }
+
+.markdown-preview-view th {
+      text-align: left;
+      border-top: none;
+      border-bottom: solid 2px var(--primary-accent);
+      font-weight: normal;
+      font-family: var(--font-headers);
+      color: var(--text-muted);
+    }
+
+.markdown-preview-view td:first-child {
+      font-weight: 500;
+      font-family: var(--font-headers);
+    }
+
+.markdown-preview-view hr {
+      height: 1px;
+      opacity: 0.5;
+    }
+
+
+/* 7. Code */
+/* -------------------------------------------------------------------------- */
+
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+        background-color:	 var(--grey-ultralight);
+        border-left: solid 2px var(--primary-accent);
+}
+
+
+.markdown-preview-view code,
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian pre.HyperMD-codeblock {
+    margin-left: 5px;
+    font-family: var(--font-monospace);
+    color: var(--text-normal);
+  }
+
+.markdown-preview-view pre>code {
+    padding: 10px 6px 10px 10px;
+    color: var(--text-normal);
+    display: flex;
+    background-color:	 var(--grey-ultralight);
+    overflow: auto;
+    white-space: pre-wrap;
+  }
+
+
+
+/* 8. Frontmatter */
+/* -------------------------------------------------------------------------- */
+
+.tree-item-flair {
+  background-color: white;
+}
+
+.frontmatter-container {
+  background-color: white;
+  border-radius: 1px;
+}
+.frontmatter-container .tag:hover {
+  color: var(--primary-accent);
+  border: solid 1px  var(--primary-accent);
+}
+
+
+
+/* 9. Header Section */
+/* -------------------------------------------------------------------------- */
+
+/* Originally from the 'notation' theme, this code moves the page title into a header block at the top of the page.*/
+
+.workspace-leaf-content[data-type=markdown] .view-header,
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .view-header {
+  max-width: 100%;
+  margin-top: 0px;
+  padding: 0;
+  border: none;
+  border-radius: 0px;
+  background-image: var(--img-header);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+  background-color: var(--primary-accent);
+  height: auto;
+  align-items: center;
+}
+
+
+.workspace-split.mod-root .workspace-leaf {
+  background-color: var(--background-primary);
+}
+
+.workspace>.workspace-split>.workspace-leaf:first-of-type:last-of-type .workspace-leaf-content[data-type=markdown] .view-header {
+  background-color: transparent;
+  border: none;
+}
+
+.workspace-leaf {
+  position: relative;
+}
+
+.workspace-leaf-content[data-type=markdown] {
+  overflow: auto;
+  position: unset;
+
+}
+
+
+.workspace-leaf-content[data-type=markdown] .view-header-title-container {
+  width: 100%;
+  margin-top: auto;
+  border-radius: 0px;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 23, 0.1);
+
+}
+.workspace-leaf-content[data-type=markdown] .view-header-title-container:after {
+  content: none;
+}
+
+.workspace-leaf-content[data-type=markdown] .view-header-title {
+  font-size: 30px;
+  font-family: var(--font-headers);
+  display:inline-flex;
+  text-align: center;
+  width: auto;
+  font-weight: 300;
+  line-height: 1.2em;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  border: solid 1px white;
+  height: auto;
+  margin-left: auto;
+  margin-right:auto;
+  white-space: normal;
+}
+
+.workspace-leaf-content[data-type=markdown] .view-actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.workspace-leaf-content[data-type=markdown] .view-header-icon {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+}
+
+.workspace-leaf-content[data-type=markdown] .view-content {
+  height: auto;
+}
+
+.workspace-leaf-content[data-type=markdown] .markdown-source-view {
+  z-index: 0;
+}
+
+.view-action {
+  color: white;
+  border: solid 0px;
+  margin: 0;
+  padding: 0 8px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 3px;
+  transition: background-color 20ms ease-in 0s;
+}
+
+.view-action>svg {
+  max-width: 14px;
+  max-height: 14px;
+}
+
+.view-action:hover,
+.view-action.is-active {
+  color: var(--text-normal);
+  background-color: var(--background-primary-alt);
+}
+
+.workspace-split.mod-vertical>.workspace-leaf:not(:last-child) {
+  padding-right: 4px;
+}
+
+
+
+
+/* 10. Jazzy Colour Blocks */
+    /* Original idea from: https://gist.github.com/mklepaczewski/54e451f09994b9d450de81c8baaf8aa4 */
+
+    .markdown-preview-view code,
+    .markdown-preview-view pre {
+      background: #ffffff;
+      color: #b82b4e;
+    }
+    .app-container .markdown-preview-view pre[class*="language-note-"] {
+      padding: 10px 10px 10px 10px;
+      text-shadow: none;
+      background-color:  #ffffff;
+      border-radius: 0;
+        text-align: center;
+        text-align: center;
+    }
+
+    .app-container .markdown-preview-view pre[class*="language-note-"] code[class*="language-note-"] {
+      white-space: pre-wrap;
+      display: block;
+      overflow: hidden;
+      width:auto;
+      text-align:center;
+      font-family: var(--font-body);
+      font-size: 16px;
+      text-shadow: none;
+      padding: 0;
+    }
+
+    .app-container .markdown-preview-view pre[class*="language-note-"] code[class*="language-note-s-"] {
+      white-space: pre-wrap;
+      display: block;
+      width:100%;
+      text-align:center;
+      font-family: var(--font-body);
+      font-size: 18px;
+      color: #FFF;
+      text-shadow: none;
+    }
+
+    .app-container .markdown-preview-view pre.language-note-notice,
+    .app-container .markdown-preview-view pre.language-note-gray-background,
+    .app-container .markdown-preview-view pre.language-note-gray-bg,
+    .gray-background,
+    .gray-bg {
+      background-color: var(--grey-light);
+    }
+
+
+    /* 10.1 Brightly coloured boxes, with cute lil icons */
+    /* Red with warning symbol */
+    .app-container .markdown-preview-view pre.language-note-s-warning::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: #fff;
+      content: "\f071";
+    }
+    .app-container .markdown-preview-view pre.language-note-s-warning {
+      background-color: var(--bright-red);
+      color: #fff;
+      text-align: center;
+    }
+
+  /* Orange with bookmark symbol */
+    .app-container .markdown-preview-view pre.language-note-s-bookmark::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: #fff;
+      content: "\f02e";
+    }
+    .app-container .markdown-preview-view pre.language-note-s-bookmark {
+      background-color: var(--bright-orange);
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Yellow with highlight symbol */
+    .app-container .markdown-preview-view pre.language-note-s-highlight::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: #fff;
+      content: "\f591";
+    }
+    .app-container .markdown-preview-view pre.language-note-s-highlight {
+      background-color: var(--bright-yellow);
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Green with feather pen symbol */
+    .app-container .markdown-preview-view pre.language-note-s-write::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: #fff;
+      content: "\f56b";
+    }
+    .app-container .markdown-preview-view pre.language-note-s-write {
+      background-color: var(--bright-green);
+      color: #fff;
+      text-align: center;
+    }
+    /* Green with file symbol */
+    .app-container .markdown-preview-view pre.language-note-s-pg::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: #fff;
+      content: "\f15c";
+    }
+    .app-container .markdown-preview-view pre.language-note-s-pg {
+      background-color: var(--bright-green);
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Blue with question symbol */
+    .app-container .markdown-preview-view pre.language-note-s-q::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: #fff;
+      content: "\f059";
+    }
+    .app-container .markdown-preview-view pre.language-note-s-q {
+      background-color: var(--bright-blue);
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Purple with clipboard symbol */
+    .app-container .markdown-preview-view pre.language-note-s-clip::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: #fff;
+      content: "\f46d";
+    }
+    .app-container .markdown-preview-view pre.language-note-s-clip {
+      background-color: var(--bright-purple);
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Pink with Folder symbol */
+    .app-container .markdown-preview-view pre.language-note-s-folder::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: #fff;
+      content: "\f07c";
+    }
+    .app-container .markdown-preview-view pre.language-note-s-folder {
+      background-color: var(--bright-pink);
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Blue with scales symbol */
+    .app-container .markdown-preview-view pre.language-note-s-scale::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: #fff;
+      content: "\f24e";
+      text-align: center;
+    }
+    .app-container .markdown-preview-view pre.language-note-s-scale {
+      background-color: var(--bright-blue);
+      color: #fff;
+      text-align: center;
+    }
+
+
+
+/* 10.2 Outlined boxes with icons */
+
+    /* Red with warning symbol */
+    .app-container .markdown-preview-view pre.language-note-warning::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: var(--bright-red);
+      content: "\f071";
+    }
+    .app-container .markdown-preview-view pre.language-note-warning {
+      background-color:#fff;
+      border: 2px solid  var(--bright-red);
+      text-align: center;
+    }
+
+  /* Orange with bookmark symbol */
+    .app-container .markdown-preview-view pre.language-note-bookmark::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: var(--bright-orange);
+      content: "\f02e";
+    }
+    .app-container .markdown-preview-view pre.language-note-bookmark {
+      background-color:#fff;
+      border: 2px solid  var(--bright-orange);
+      text-align: center;
+    }
+
+    /* Yellow with highlight symbol */
+    .app-container .markdown-preview-view pre.language-note-highlight::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: var(--bright-yellow)
+      content: "\f591";
+    }
+    .app-container .markdown-preview-view pre.language-note-highlight {
+      background-color:#fff;
+      border: 2px solid  var(--bright-yellow);
+      text-align: center;
+    }
+
+    /* Green with feather pen symbol */
+    .app-container .markdown-preview-view pre.language-note-write::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color:  var(--bright-green);
+      content: "\f56b";
+    }
+    .app-container .markdown-preview-view pre.language-note-write {
+      background-color:#fff;
+      border: 2px solid var(--bright-green);
+    }
+
+    /* Blue with question symbol */
+    .app-container .markdown-preview-view pre.language-note-q::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: var(--bright-blue);
+      content: "\f059";
+    }
+    .app-container .markdown-preview-view pre.language-note-q {
+      background-color:#fff;
+      border: 2px solid  var(--bright-blue);
+      text-align: center;
+    }
+
+    /* Purple with clipboard symbol */
+    .app-container .markdown-preview-view pre.language-note-clip::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: var(--bright-purple);
+      content: "\f46d";
+    }
+    .app-container .markdown-preview-view pre.language-note-clip {
+      background-color:#fff;
+      border: 2px solid var(--bright-purple);
+      text-align: center;
+    }
+
+    /* Pink with Folder symbol */
+    .app-container .markdown-preview-view pre.language-note-folder::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color: var(--bright-pink);
+      content: "\f07c";
+    }
+    .app-container .markdown-preview-view pre.language-note-folder {
+      background-color:#fff;
+      border: 2px solid var(--bright-pink);
+      text-align: center;
+    }
+
+  /* 10.3 Coloured border notes */
+
+    .app-container .markdown-preview-view pre.language-note-red {
+      background-color:#fff;
+      border: 2px solid var(--bright-red);
+    }
+    .app-container .markdown-preview-view pre.language-note-no {
+      background-color:#fff;
+      border: 2px solid var(--bright-red);
+      text-align: center;
+    }
+    .app-container .markdown-preview-view pre.language-note-no::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color:var(--bright-red);
+      content: "\f057";
+    }
+    .app-container .markdown-preview-view pre.language-note-orange {
+      background-color:#fff;
+      border: 2px solid var(--bright-orange);
+    }
+    .app-container .markdown-preview-view pre.language-note-yellow {
+      background-color:#fff;
+      border: 2px solid var(--bright-yellow);
+    }
+    .app-container .markdown-preview-view pre.language-note-green {
+      background-color:#fff;
+      border: 2px solid var(--bright-green);
+    }
+    .app-container .markdown-preview-view pre.language-note-yes {
+      background-color:#fff;
+      border: 2px solid var(--bright-green);
+      text-align: center;
+    }
+    .app-container .markdown-preview-view pre.language-note-yes::before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      color:var(--bright-green);
+      content: "\f058";
+    }
+    .app-container .markdown-preview-view pre.language-note-blue {
+      background-color:#fff;
+      border: 2px solid var(--bright-blue);
+    }
+    .app-container .markdown-preview-view pre.language-note-purple {
+      background-color:#fff;
+      border: 2px solid var(--bright-purple);
+    }
+    .app-container .markdown-preview-view pre.language-note-pink {
+      background-color:#fff;
+      border: 2px solid var(--bright-pink);
+    }
+
+
+.markdown-preview-view pre.language-script {
+  background-color: white;
+  border: solid 1px grey;
+  max-height: 400px;
+  overflow: scroll;
+}
+.markdown-preview-view pre.language-script code{
+white-space: pre-wrap;
+}
+
+/* 11. Tags */
+/* -------------------------------------------------------------------------- */
+
+a.tag,
+.frontmatter-container .tag,
+.cm-s-obsidian span.cm-hashtag {
+  color: white;
+  text-decoration: none;
+  text-decoration-color: white;
+  background-color: var(--primary-accent);
+  padding: 3px 6px;
+  border-radius: 5px;
+  font-size: 14px;
+  border: none;
+}
+
+.frontmatter-container .tag:hover,
+.tag:hover {
+  color: var(--primary-accent);
+  background-color: white;
+  border: solid 1px  var(--primary-accent);
+}
+
+.cm-s-obsidian span.cm-hashtag-begin {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+  padding-right: 0;
+  font-size: 15px; /* why? I dunno. Just needs it to balance out */
+}
+
+.cm-s-obsidian span.cm-hashtag-end {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+  padding-left: 0;
+}
+
+
+.tag[href^="#case"] {
+background-color: var(--bright-green);
+}
+
+.frontmatter-container .tag[href^="#case"]:hover,
+.tag[href^="#case"]:hover {
+  color: var(--bright-green);
+  background-color: white;
+  border: solid 1px  var(--bright-green);
+}
+.tag[href^="#offence"] {
+background-color: var(--bright-red);
+}
+
+.frontmatter-container .tag[href^="#offence"]:hover,
+.tag[href^="#offence"]:hover {
+  color: var(--bright-red);
+  background-color: white;
+  border: solid 1px  var(--bright-red);
+}
+
+
+/* 12. Summary boxes and callouts */
+/***********************************************************************************/
+
+/* This bit adds some new blockquote styles so you can have pretty lil callouts.
+
+    */
+    .markdown-preview-view blockquote {
+      border-radius: 0px;
+      border: 0px solid var(--background-modifier-border);
+      background-color: var(--background-primary);
+      border-left: 0px solid var(--primary-accent);
+      padding: 10px 10px 10px 10px;
+      display: block;
+      margin-block-start: 0.5em;
+      margin-block-end: 1em;
+      margin-inline-start: 20px;
+      text-align: justify;
+      hyphens: auto;
+      /* margin-inline-start: 0; */
+    }
+    .markdown-preview-view blockquote > p {
+      border: none;
+      border-left:  3px solid var(--primary-accent);
+      padding-left: 20px;
+    }
+    .markdown-preview-view blockquote >:first-child {
+    	margin-top: 0;
+    }
+    .markdown-preview-view blockquote>:last-child {
+    	margin-bottom: 0;
+    }
+
+
+    .markdown-preview-view blockquote > blockquote,
+    .markdown-preview-view blockquote > blockquote > blockquote,
+    .markdown-preview-view blockquote > blockquote > blockquote > blockquote{
+        border-radius: 0px;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        display: inline-block;
+        hyphens: auto;
+    }
+
+    .markdown-preview-view blockquote > blockquote p ,
+    .markdown-preview-view blockquote > blockquote > blockquote p,
+    .markdown-preview-view blockquote > blockquote > blockquote > blockquote p  {
+      border-radius: 0px;
+      width: inherit;
+      text-align: center;
+      padding: 10px 2px 10px 2px;
+      hyphens: auto;
+      background-color: #fff;
+      font-size: 16px;
+      font-style: normal;
+      letter-spacing: .5px;
+      text-align: center;
+      margin: 0px;
+      background-color: var(--background-primary);
+    }
+
+    .markdown-preview-view blockquote > blockquote p::before ,
+    .markdown-preview-view blockquote > blockquote > blockquote p::before,
+    .markdown-preview-view blockquote > blockquote > blockquote > blockquote p::before  {
+          font-family: 'Font Awesome 5 Free';
+          display: block;
+          font-weight: 900;
+    }
+
+
+    /* Double >> : coloured bordered information box */
+
+      .markdown-preview-view blockquote > blockquote > p {
+        border: 2px solid var(--primary-accent);
+      }
+
+      .markdown-preview-view blockquote > blockquote p::before {
+          color: var(--primary-accent);
+          content: "\f518";
+        }
+
+
+
+    /* Double >> : coloured bordered warning box */
+
+    .markdown-preview-view blockquote > blockquote > blockquote p {
+      border: 2px solid var(--bright-red);
+
+    }
+    .markdown-preview-view blockquote > blockquote > blockquote p::before {
+      color: var(--bright-red);
+      content: "\f071";
+    }
+
+      .markdown-preview-view blockquote > blockquote > blockquote > blockquote p::before {
+      color: var(--bright-green);
+      content: "\f15c";
+    }
+
+    .markdown-preview-view blockquote > blockquote > blockquote >  blockquote p {
+      border: 2px solid var(--bright-green);
+    }
