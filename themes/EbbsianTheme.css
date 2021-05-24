@@ -27,9 +27,9 @@
   --default-font: "Spectral", serif;
   --mermaid-font: var(--default-font);
   --reveal-font: var(--default-font);
-  --font-body: "Spectral", serif;
+  --font-body: "Spectral", "Bembo", "Goudy Old Style",  serif;
   --font-monospace: "Anonymous Pro", "Source Code Pro", monospace;
-  --font-headers: "Raleway";
+  --font-headers: "Raleway", "Century Gothic","Segoe UI Semilight","Segoe UI", sans-serif;
 
 
 /* 2. Colour Palette */
