@@ -1,3 +1,17 @@
+/* @settings
+
+name: Ebbsian Theme Settings
+id: ebbsian-theme
+settings:
+    - 
+        id: img-header
+        title: Vault Header Image
+        description: Put a new image url here to change the vault header image. The url must be formatted as url(image)
+        type: variable-text
+        default: url("https://images.unsplash.com/photo-1576235789670-28a9c8e950b8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
+
+*/
+
 :root {
 /* ========================================================================== */
 
