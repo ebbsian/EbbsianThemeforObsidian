@@ -2,6 +2,7 @@
 
 name: Ebbsian Theme Settings
 id: ebbsian-theme
+collapsed: false
 settings:
       -
         id: img-header
@@ -9,6 +10,23 @@ settings:
         description: Put a new image url here to change the vault header image. The url must be formatted url(image)
         type: variable-text
         default: url("https://images.unsplash.com/photo-1576235789670-28a9c8e950b8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")
+      -
+        id: fonts
+        title: Font Settings
+        type: heading
+        level: 3
+      -
+        id: default-font
+        title: Body Font
+        description: Enter a font family name to set the main body font.
+        type: variable-text
+        default: "Spectral, serif"
+      -
+        id: font-headers
+        title: Header Font
+        description: Enter a font family name to set the main header font.
+        type: variable-text
+        default: "Raleway, sans-serif"
       -
         id: colours
         title: Colour Settings
@@ -120,6 +138,8 @@ settings:
             - var(--bright-purple)
             - var(--bright-pink)
 */
+@import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 :root {
 /* ========================================================================== */
@@ -150,7 +170,6 @@ settings:
   --default-font: "Spectral", "Bembo", "Goudy Old Style",  serif;
   --mermaid-font: var(--default-font);
   --reveal-font: var(--default-font);
-  --font-body: "Spectral", "Bembo", "Goudy Old Style",  serif;
   --font-monospace: "Anonymous Pro", "Source Code Pro", monospace;
   --font-headers: "Raleway", "Century Gothic","Segoe UI Semilight","Segoe UI", sans-serif;
 
@@ -347,20 +366,20 @@ a.internal-link:hover {
 }
 /* Display style for *emphasised* text */
 .markdown-preview-view em {
-  font-family: var(--font-body);
+  font-family: var(--default-font);
   font-style: italic;
 }
 
 /* Display style for **strong** text */
 .markdown-preview-view strong {
-  font-family: var(--font-body);
+  font-family: var(--default-font);
   font-weight: 500;
     color: var(--text-accent);
 }
 
 /* Display style for ***stong emphasised*** text */
 .markdown-preview-view strong > em {
-  font-family: var(--font-body);
+  font-family: var(--default-font);
   font-weight: 500;
   font-style: italic;
   color: var(--text-accent);
@@ -754,7 +773,7 @@ width: inherit;
       overflow: hidden;
       width:auto;
       text-align:center;
-      font-family: var(--font-body);
+      font-family: var(--default-font);
       font-size: 16px;
       text-shadow: none;
       padding: 0;
@@ -765,7 +784,7 @@ width: inherit;
       display: block;
       width:100%;
       text-align:center;
-      font-family: var(--font-body);
+      font-family: var(--default-font);
       font-size: 18px;
       color: #FFF;
       text-shadow: none;

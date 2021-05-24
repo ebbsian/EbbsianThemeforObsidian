@@ -8,8 +8,7 @@ Many thanks to Deathau for their [Notation Theme](https://github.com/deathau/Not
 Download the css file and drop it into your themes folder!
 
 ## Fonts
-I believe in order for these to work you'll need to download and install the correct fonts locally. 
-The primary fonts used are:
+The fonts used should work automagically, but if they don't (or you want to work offine, as they currently pull directly from Google fonts), the primary fonts used are:
 - Headers: [Raleway](https://fonts.google.com/specimen/Raleway)
 - Body: [Spectral](https://fonts.google.com/specimen/Spectral)
 
@@ -17,7 +16,7 @@ FontAwesome is used for the callout boxes.
 [Download here](https://fontawesome.com/how-to-use/on-the-desktop/setup/getting-started) and install the solid bold otf. 
 
 ## Settings
-This theme is compatible with the Style Settings plugin - there are options to change the header image, accent colour, and header underline colours.
+This theme is compatible with the Style Settings plugin - there are options to change the header image, accent colour, and header underline colours, as well as the body and header fonts.
 
 
 <img src="./Screenshots/stylesettings.PNG" width="100%">
