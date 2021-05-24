@@ -20,8 +20,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Format Your Notes.md",
-            "mode": "preview"
+            "file": "Blockquotes and Callouts.md",
+            "mode": "source"
           }
         }
       }
@@ -79,7 +79,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Format Your Notes.md",
+                "file": "Blockquotes and Callouts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,9 +99,9 @@
   },
   "active": "137e2ba5f91a7646",
   "lastOpenFiles": [
-    "Format Your Notes.md",
-    "Stuff.md",
     "Blockquotes and Callouts.md",
+    "Stuff.md",
+    "Format Your Notes.md",
     "Code.md",
     "This is a link.md",
     "Untitled.md"
