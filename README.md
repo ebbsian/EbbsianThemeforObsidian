@@ -14,6 +14,7 @@ The primary fonts used are:
 - Body: ![Spectral](https://fonts.google.com/specimen/Spectral)
 
 FontAwesome is used for the callout boxes.
+![Download here](https://fontawesome.com/how-to-use/on-the-desktop/setup/getting-started) and install the solid bold otf. 
 
 ## Header images
 The header image is set manually in the CSS code. To change it, open the CSS file - the header url is defined at the very beginnning of the file. Simply add the URL of the image you'd like to use, and voila! The title text will remain white, but the image will be tinted slightly to make it easier to read.
