@@ -16,8 +16,11 @@ The primary fonts used are:
 FontAwesome is used for the callout boxes.
 ![Download here](https://fontawesome.com/how-to-use/on-the-desktop/setup/getting-started) and install the solid bold otf. 
 
-## Header images
-The header image is set manually in the CSS code. To change it, open the CSS file - the header url is defined at the very beginnning of the file. Simply add the URL of the image you'd like to use, and voila! The title text will remain white, but the image will be tinted slightly to make it easier to read.
+## Settings
+This theme is compatible with the Style Settings plugin - there are options to change the header image, accent colour, and header underline colours.
+
+
+<img src="./Screenshots/stylesettings.PNG" width="100%">
 
 # Screenshots
 
