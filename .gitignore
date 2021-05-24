@@ -1,2 +1,6 @@
 
 workspace
+config
+*.js
+*.json
+plugins/obsidian-style-settings/styles.css
