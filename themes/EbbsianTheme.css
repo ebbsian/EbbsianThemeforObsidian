@@ -584,28 +584,28 @@ width: inherit;
 
 .cm-s-obsidian div.HyperMD-codeblock-bg {
         background-color:	 var(--grey-ultralight);
-        border-left: solid 2px var(--primary-accent);
+        /*border-left: solid 2px var(--primary-accent);*/
 }
-
-
 .markdown-preview-view code,
 .cm-s-obsidian span.cm-inline-code,
 .cm-s-obsidian pre.HyperMD-codeblock {
-    margin-left: 5px;
+    /*margin-left: 5px;*/
     font-family: var(--font-monospace);
     color: var(--text-normal);
+    border-left: solid 2px var(--primary-accent);
   }
 
 .markdown-preview-view pre>code {
+  counter-reset: line;
     padding: 10px 6px 10px 10px;
     color: var(--text-normal);
     display: flex;
     background-color:	 var(--grey-ultralight);
+    border-left: solid 2px var(--primary-accent);
     overflow: auto;
+    border-radius: 0px;
     white-space: pre-wrap;
   }
-
-
 
 /* 8. Frontmatter */
 /* -------------------------------------------------------------------------- */
