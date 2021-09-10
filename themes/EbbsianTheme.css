@@ -587,25 +587,46 @@ width: inherit;
         /*border-left: solid 2px var(--primary-accent);*/
 }
 .markdown-preview-view code,
-.cm-s-obsidian span.cm-inline-code,
 .cm-s-obsidian pre.HyperMD-codeblock {
     /*margin-left: 5px;*/
     font-family: var(--font-monospace);
     color: var(--text-normal);
     border-left: solid 2px var(--primary-accent);
+    font-weight:bold;
+    border-radius: 0px;
   }
+
+  .markdown-preview-view p>code {
+    border-left: none;
+    background-color:	 var(--grey-ultralight);
+    font-weight:bold;
+    color: var(--text-normal);
+  }
+
+  .cm-s-obsidian span.cm-inline-code {
+      background-color:	 var(--grey-ultralight);
+      font-weight:bold;
+      color: var(--text-normal);
+  }
+  .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+    background-color:	 var(--grey-ultralight);
+  }
+
+
 
 .markdown-preview-view pre>code {
   counter-reset: line;
     padding: 10px 6px 10px 10px;
     color: var(--text-normal);
     display: flex;
+    font-weight:bold;
     background-color:	 var(--grey-ultralight);
     border-left: solid 2px var(--primary-accent);
     overflow: auto;
     border-radius: 0px;
     white-space: pre-wrap;
   }
+
 
 /* 8. Frontmatter */
 /* -------------------------------------------------------------------------- */
