@@ -582,50 +582,48 @@ width: inherit;
 /* 7. Code */
 /* -------------------------------------------------------------------------- */
 
-.cm-s-obsidian div.HyperMD-codeblock-bg {
-        background-color:	 var(--grey-ultralight);
-        /*border-left: solid 2px var(--primary-accent);*/
+/* Normal codeblocks: preview mode */
+
+/* Set font and line background */
+.markdown-preview-view pre code {
+  background-color: transparent;
+  font-family: var(--font-monospace);
+  color: var(--text-normal);
 }
-.markdown-preview-view code,
-.cm-s-obsidian pre.HyperMD-codeblock {
-    /*margin-left: 5px;*/
-    font-family: var(--font-monospace);
+
+/* Set background to light grey, add an accent border and remove rounded edges. */
+.markdown-preview-view pre {
+  background-color: var(--grey-ultralight);
+  border-left: solid 2px var(--primary-accent);
+  border-radius: 0px;
+}
+
+/* Normal codeblocks: edit mode */
+/* Set background to light grey, add an accent border and remove rounded edges. */
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+  background-color: var(--grey-ultralight);
+  border-left: solid 2px var(--primary-accent);
+  border-radius: 0px;
+  padding-left: 10px;
+}
+
+/* Set font colour and add padding to give a bit more space on the LHS. */
+.cm-s-obsidian pre.HyperMD-codeblock.CodeMirror-line {
+    padding-left: 10px;
     color: var(--text-normal);
-    border-left: solid 2px var(--primary-accent);
-    font-weight:bold;
-    border-radius: 0px;
-  }
+}
 
-  .markdown-preview-view p>code {
-    border-left: none;
-    background-color:	 var(--grey-ultralight);
-    font-weight:bold;
-    color: var(--text-normal);
-  }
-
-  .cm-s-obsidian span.cm-inline-code {
-      background-color:	 var(--grey-ultralight);
-      font-weight:bold;
-      color: var(--text-normal);
-  }
-  .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
-    background-color:	 var(--grey-ultralight);
-  }
-
-
-
-.markdown-preview-view pre>code {
-  counter-reset: line;
-    padding: 10px 6px 10px 10px;
-    color: var(--text-normal);
-    display: flex;
-    font-weight:bold;
-    background-color:	 var(--grey-ultralight);
-    border-left: solid 2px var(--primary-accent);
-    overflow: auto;
-    border-radius: 0px;
-    white-space: pre-wrap;
-  }
+/* Inline code, both edit and preview modes. Grey background, normal text colour, bold. */
+.markdown-preview-view p>code,
+.markdown-preview-view a>code,
+.markdown-preview-view li>code,
+.cm-s-obsidian p>pre.HyperMD-codeblock
+.cm-s-obsidian span.cm-inline-code {
+        background-color:	 var(--grey-ultralight);
+        font-weight:bold;
+        color: var(--text-normal);
+        border-left: 0px;
+    }
 
 
 /* 8. Frontmatter */
